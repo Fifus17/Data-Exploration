@@ -1,0 +1,50 @@
+{
+    "New York": {
+      "city_centre": [
+        [40.700292, -74.010773],
+        [40.875363, -73.909062],
+        [40.870028, -73.906651],
+        [40.700292, -74.000773]
+      ],
+      "landmarks": [
+        { "name": "Statue of Liberty", "location": [40.689247, -74.044502], "popularity": 100 },
+        { "name": "Central Park", "location": [40.785091, -73.968285], "popularity": 95 },
+        { "name": "Times Square", "location": [40.758896, -73.985130], "popularity": 90 },
+        { "name": "Empire State Building", "location": [40.748817, -73.985428], "popularity": 85 },
+        { "name": "Brooklyn Bridge", "location": [40.706086, -73.996864], "popularity": 80 }
+      ]
+    },
+    "London": {
+      "city_centre": [
+        [51.513845, -0.156909],
+        [51.513357, -0.116773],
+        [51.503399, -0.119519],
+        [51.500729, -0.124625],
+        [51.507268, -0.165730]
+      ],
+      "landmarks": [
+        { "name": "Big Ben", "location": [51.500729, -0.124625], "popularity": 100 },
+        { "name": "London Eye", "location": [51.503399, -0.119519], "popularity": 95 },
+        { "name": "Tower of London", "location": [51.508112, -0.075949], "popularity": 90 },
+        { "name": "Buckingham Palace", "location": [51.501364, -0.141890], "popularity": 85 },
+        { "name": "British Museum", "location": [51.519413, -0.127000], "popularity": 80 }
+      ]
+    },
+    "Barcelona": {
+      "city_centre": [
+        [41.383959, 2.181431],
+        [41.385064, 2.173404],
+        [41.387920, 2.169919],
+        [41.391540, 2.177135],
+        [41.388790, 2.192029]
+      ],
+      "landmarks": [
+        { "name": "Sagrada Família", "location": [41.403629, 2.174356], "popularity": 100 },
+        { "name": "Park Güell", "location": [41.414494, 2.152694], "popularity": 95 },
+        { "name": "La Rambla", "location": [41.380897, 2.173403], "popularity": 90 },
+        { "name": "Casa Batlló", "location": [41.391640, 2.164870], "popularity": 85 },
+        { "name": "Montjuïc", "location": [41.363556, 2.165667], "popularity": 80 }
+      ]
+    }
+  }
+  
