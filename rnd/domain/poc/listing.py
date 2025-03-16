@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 
-from rnd.domain.poc.city import City
 
 @dataclass(frozen=True)
 class Listing:

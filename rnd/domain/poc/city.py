@@ -2,6 +2,7 @@ from enum import Enum
 from dataclasses import dataclass
 import json
 
+
 class AvailableCity(Enum):
     NEW_YORK = "New York"
     LONDON = "London"
@@ -42,6 +43,10 @@ class CityFactory:
             cities = {}
             for city_name, city_data in data.items():
                 city_centre = tuple(tuple(coord) for coord in city_data["city_centre"])
-                landmarks = tuple(Landmark(**landmark) for landmark in city_data["landmarks"])
-                cities[city_name] = City(name=city_name, city_centre=city_centre, landmarks=landmarks)
+                landmarks = tuple(
+                    Landmark(**landmark) for landmark in city_data["landmarks"]
+                )
+                cities[city_name] = City(
+                    name=city_name, city_centre=city_centre, landmarks=landmarks
+                )
         return cities
