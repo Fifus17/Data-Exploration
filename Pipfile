@@ -12,6 +12,8 @@ pandera = "*"
 jupyter = "*"
 matplotlib = "*"
 seaborn = "*"
+geopandas = "*"
+contextily = "*"
 
 [requires]
 python_version = "3.13"
