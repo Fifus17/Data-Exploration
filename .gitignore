@@ -19,6 +19,5 @@ __pycache__/
 *.log
 *.env
 
-Pipfile*
 
 data/
