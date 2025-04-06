@@ -19,5 +19,6 @@ __pycache__/
 *.log
 *.env
 
+cache
 
 data/

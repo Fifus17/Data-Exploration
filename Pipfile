@@ -7,6 +7,8 @@ name = "pypi"
 requests = "*"
 pandas = "*"
 pandera = "*"
+osmnx = "*"
+geopy = "*"
 
 [dev-packages]
 jupyter = "*"

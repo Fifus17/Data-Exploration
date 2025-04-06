@@ -5,7 +5,7 @@ import os
 import pandera as pa
 from pandera.typing import DataFrame
 
-
+from rnd.rbnb.geospatial_features.transform import add_geospatial_features
 from rnd.rbnb.transform import transform_listings
 from rnd.rbnb.schemas.listing import ListingDataFrame
 
@@ -18,12 +18,26 @@ CITIES_URL: dict[AvailableCity, str] = {
 DATA_DIR = "./data"
 
 
-def _city_to_filename(city: AvailableCity) -> str:
-    return f"{city.name.lower()}_listings.csv.gz"
+def _city_to_filename(city: AvailableCity, geo=False) -> str:
+    return f"{city.name.lower()}{'_geo' if geo else ''}_listings.csv.gz"
 
 
+def load_rbnb_listing_data(
+    city: AvailableCity, reset_cache=False
+) -> DataFrame[ListingDataFrame]:
+    city_file_path_with_geo_data = f"{DATA_DIR}/{_city_to_filename(city, geo=True)}"
+
+    if reset_cache or not os.path.exists(city_file_path_with_geo_data):
+        df = _load_rbnb_listing_data(city)
+        df.to_csv(city_file_path_with_geo_data, index=False)
+        return df
+    else:
+        return pd.read_csv(city_file_path_with_geo_data)
+
+
+@add_geospatial_features
 @pa.check_types(lazy=True)
-def load_rbnb_listing_data(city: AvailableCity) -> DataFrame[ListingDataFrame]:
+def _load_rbnb_listing_data(city: AvailableCity) -> DataFrame[ListingDataFrame]:
     city_file_path = f"{DATA_DIR}/{_city_to_filename(city)}"
 
     if not os.path.exists(city_file_path):
