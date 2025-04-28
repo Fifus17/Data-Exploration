@@ -24,7 +24,7 @@ def add_geospatial_features(
     def wrapper(city: AvailableCity) -> pd.DataFrame:
         df = func(city)
         add_landmark_distances(df, city)
-        # add_custom_distances(df, city)
+        add_custom_distances(df, city)
         return df
 
     return wrapper

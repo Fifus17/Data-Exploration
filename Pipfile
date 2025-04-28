@@ -9,6 +9,9 @@ pandas = "*"
 pandera = "*"
 osmnx = "*"
 geopy = "*"
+lightgbm = "*"
+scikit-learn = "*"
+sentence-transformers = "*"
 
 [dev-packages]
 jupyter = "*"
