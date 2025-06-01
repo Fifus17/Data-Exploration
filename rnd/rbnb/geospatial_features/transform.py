@@ -36,7 +36,7 @@ def add_landmark_distances(df: pd.DataFrame, city: AvailableCity) -> None:
 
     print(f"Adding geospatial features for {city.name} dataset...")
     for i, landmark in enumerate(city_landmarks):
-        df[f"dist_{_sanitize_landmark_name(landmark["name"])}"] = df.apply(
+        df[f"dist_{_sanitize_landmark_name(landmark['name'])}"] = df.apply(
             lambda row: calculate_distance(
                 row["latitude"],
                 row["longitude"],
